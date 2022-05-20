@@ -18,12 +18,13 @@ const Modals = props => {
           />
         </View>
         <View style={style.down}>
-          <TouchableOpacity style={{flex:1,justifyContent:'center',alignItems:'center',backgroundColor:'grey',margin:10}} onPress={()=>{props.setVisible(false)}}>
-          <Text style={{fontSize:24,fontWeight:'bold'}}>KAPAT</Text>
+          <TouchableOpacity
+            style={style.button}
+            onPress={() => {
+              props.setVisible(false);
+            }}>
+            <Text style={style.button_text}>KAPAT</Text>
           </TouchableOpacity>
-         
-
-
         </View>
       </View>
     </Modal>
