@@ -10,14 +10,14 @@ const Modals = props => {
       hasBackdrop={false}
       isVisible={props.visible}
       deviceHeight={Dimensions.get('window').height}>
-      <View style={{flex: 1, backgroundColor: 'white'}}>
-        <View style={{flex: 9}}>
+      <View style={style.container}>
+        <View style={style.left}>
           <WebView
             source={{uri: 'https://www.kap.org.tr/tr/Bildirim/' + props.id}}
             style={{marginTop: 20}}
           />
         </View>
-        <View style={{flex: 1}}>
+        <View style={style.down}>
           <TouchableOpacity style={{flex:1,justifyContent:'center',alignItems:'center',backgroundColor:'grey',margin:10}} onPress={()=>{props.setVisible(false)}}>
           <Text style={{fontSize:24,fontWeight:'bold'}}>KAPAT</Text>
           </TouchableOpacity>
